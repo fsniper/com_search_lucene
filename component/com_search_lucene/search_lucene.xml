@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+    <name>search_lucene</name>
+    <author>Onur YALAZI</author>
+    <creationDate>12/08/2009</creationDate>
+    <license>GNU/GPL</license>
+    <version>0.1</version>
+    <description>This is a Joomla! 1.5 Search component, using Zend Lucene.</description>
+
+    <!-- installation part -->
+    <install>
+        <queries>
+           
+        </queries>
+    </install>
+
+    <!-- user part -->
+    <files folder="components/com_search_lucene">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>router.php</filename>
+        <filename>search_lucene.php</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.com_search_lucene.ini</language>
+        <language tag="tr-TR">language/tr-TR.com_search_lucene.ini</language>
+    </languages>
+
+    <!-- administration part -->
+    <administration>
+
+      <menu task="default" img="js/ThemeOffice/component.png">Com Search Lucene</menu>
+      <submenu>
+          <menu link="option=com_search_lucene">Plugin Listing</menu>
+      </submenu>
+
+      <files>
+          <filename>search_lucene.xml</filename>
+      </files>
+      <files folder="administrator/components/com_search_lucene">
+          <filename>config.xml</filename>
+          <filename>controller.php</filename>
+          <filename>index.html</filename>
+          <filename>search_lucene.php</filename>
+          <folder>helpers</folder>
+          <folder>models</folder>
+          <folder>tables</folder>
+          <folder>views</folder>
+      </files>
+
+    </administration>
+
+    <params>
+      <param 
+        name="indexpath"
+        type="text"
+        default="SearchLuceneIndexPath"
+        label="Index files path"
+        description="A directory to put indexes in. Should be writable and readable by your server user." 
+      />
+    </params>
+
+</install>
